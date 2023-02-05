@@ -7,7 +7,7 @@ module.exports.create = async function(req,res){
   try{
       let post = await Post.findById(req.body.post);
       if(post){
-        Comment.create({
+       let comment = await Comment.create({
             content: req.body.content,
             post: req.body.post,
             user: req.user._id
@@ -15,12 +15,13 @@ module.exports.create = async function(req,res){
 
           post.comments.push(comment);
           post.save();
+          req.flash('success','Comment Published!');
 
           res.redirect('/');
         
       }
   }catch(err){
-    console.log('Error',err);
+    req.flash('Error',err);
     return;
   }
 }
@@ -41,11 +42,13 @@ module.exports.destroy = async function(req, res){
         
           
         }else{
-         return res.redirect('back');
+          req.flash('error','Unauthorized');
+          return res.redirect('back');
         }
     
     }catch(err){
-      console.log('Error', err);
+      req.flash('error',err);
+      return;
     }
   
   

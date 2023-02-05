@@ -3,7 +3,7 @@ const User = require('../models/user');
 module.exports.profile = function(req,res){
     console.log(req.params.id)
     User.findById(req.params.id, function(err,user){
-        console.log(user)
+       console.log(user)
       return res.render('user_profile', {
         title : 'User Profile',
         profile_user: user
@@ -14,11 +14,13 @@ module.exports.profile = function(req,res){
 
 module.exports.update = function(req,res){
     if(req.user.id == req.params.id){
-        User.findByIdAndUpdate(req.params.id, req.body, function(err,user){
+         User.findByIdAndUpdate(req.params.id, req.body, function(err,user){
+            req.flash('success','Updated!');
             return res.redirect('back');
         });
 
     }else{
+        req.flash('error','Unauthorized');
         return res.status(401).send('Unauthorized');
     }
 }
@@ -52,6 +54,7 @@ module.exports.signIn = function(req,res){
 module.exports.create = function(req,res){
     console.log(req.body)
     if(req.body.password != req.body.confirm_password){
+        req.flash('error','Passwords do not match');
         return res.redirect('back');
     }
 
@@ -60,25 +63,31 @@ module.exports.create = function(req,res){
 
        if(!user){
         User.create(req.body,function(err,user){
-            if(err){console.log('error in creating user while signing up'); return} 
+            if(err){req.flash('error',err); return} 
             
-            return res.redirect('/users/sign-in')
+            return res.redirect('/users/sign-in');
         })
        }else{
+        req.flash('success','You have signed up, login to continue!');
         return res.redirect('back');
        }
     });
 }
 //Sign in and create a session for the user
 module.exports.createSession = function(req,res){
+    req.flash('success','Logged in Successfully');
+
     return res.redirect('/');
 }
 
 
 module.exports.destroySession = function(req, res){
-    req.logout(function(err){
-        return
-    });
+        req.logout(function(err){
+            if(err)
+            return next(err);
+        });
+        req.flash('success','You Have Logged out!');
+    
 
     return res.redirect('/');
 }
