@@ -2,21 +2,23 @@
     // method to submit the form data for new post using AJAX
     let createPost = function(){
         let newPostForm = $('#new-post-form');
+        console.log(newPostForm);
 
         newPostForm.submit(function(e){
             e.preventDefault();
-
+           console.log("hello");
             $.ajax({
                 type: 'post',
                 url: '/posts/create',
                 data: newPostForm.serialize(),
                 success: function(data){
+                    console.log(data);
                     let newPost = newPostDom(data.data.post);
                     $('#posts-list-container>ul').prepend(newPost);
                     deletePost($(' .delete-post-button', newPost));
 
                     // call the create comment class
-                    new PostComments(data.data.post._id);
+                   // new PostComments(data.data.post._id);
 
                     new Noty({
                         theme: 'relax',
@@ -109,7 +111,7 @@
 
             // get the post's id by splitting the id attribute
             let postId = self.prop('id').split("-")[1]
-            new PostComments(postId);
+           // new PostComments(postId);
         });
     }
 
