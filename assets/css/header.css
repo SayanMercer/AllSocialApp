@@ -1,3 +1,11 @@
+.nav {
+  display: flex;
+  background: #6200ee;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
 #layout-header nav {
   display: flex;
   justify-content: space-between;
