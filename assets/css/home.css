@@ -1,4 +1,4 @@
-/* #home-container {
+#home-container {
   display: flex; }
   #home-container #feed-posts {
     width: 70%;
@@ -7,72 +7,4 @@
     width: 30%;
     padding: 10px;
     border-left: 1px solid lightgray;
-    height: 100%; } */
-
-        #home-container {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: flex-start;
-        }
-    
-        #feed-posts,
-        #user-friends {
-          flex-basis: 45%;
-          margin-right: 20px;
-        }
-    
-        #feed-posts h4,
-        #user-friends h4 {
-          font-size: 20px;
-          font-weight: bold;
-          margin-bottom: 10px;
-        }
-    
-        #create-post-form {
-          margin-bottom: 20px;
-        }
-    
-        .create-post textarea {
-          width: 100%;
-          padding: 10px;
-          border: 1px solid #ccc;
-          border-radius: 5px;
-          resize: vertical;
-        }
-    
-        #create-post-form #add-post-btn {
-          margin-top: 10px;
-          padding: 10px 20px;
-          background-color: #4aa0bd;
-          color: #fff;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-        }
-    
-        #posts-list-container ul {
-          list-style-type: none;
-          padding: 0;
-        }
-    
-        #user-friends p {
-          margin-bottom: 10px;
-        }
-    
-        #user-friends a {
-          color: #4aa0bd;
-          text-decoration: none;
-        }
-    
-        #user-chat-box {
-          position: fixed;
-          bottom: 10px;
-          right: 10px;
-          border: 1px dashed grey;
-          height: 350px;
-          width: 300px;
-          background: white;
-          padding: 5px;
-          box-shadow: 1px 1px 1px 1px lightgrey;
-        }
+    height: 100%; }
