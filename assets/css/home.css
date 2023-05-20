@@ -1,10 +1,62 @@
 #home-container {
-  display: flex; }
-  #home-container #feed-posts {
-    width: 70%;
-    padding: 10px; }
-  #home-container #user-friends {
-    width: 30%;
-    padding: 10px;
-    border-left: 1px solid lightgray;
-    height: 100%; }
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+/* Style for the feed posts section */
+#feed-posts {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px; }
+
+/* Style for the posts header */
+#feed-posts h4 {
+  font-size: 18px;
+  margin-bottom: 10px; }
+
+/* Style for the new post form */
+#create-post-form {
+  margin-bottom: 10px; }
+
+.create-post textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  resize: vertical; }
+
+#create-post-btn {
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer; }
+
+/* Style for the posts list container */
+#posts-list-container ul {
+  list-style: none;
+  padding: 0; }
+
+/* Style for the user friends section */
+#user-friends {
+  width: 100%;
+  max-width: 800px; }
+
+/* Style for the friends header */
+#user-friends h4 {
+  font-size: 18px;
+  margin-bottom: 10px; }
+
+/* Style for the friend links */
+#user-friends p {
+  margin: 5px 0; }
+
+#user-friends a {
+  color: #333;
+  text-decoration: none;
+  align-items: right;
+} 
+ 
+/* Style for the chat box */
+#user-chat-box {
+  width: 100%;
+  max-width: 1000px; }

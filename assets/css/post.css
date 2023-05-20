@@ -1,10 +1,10 @@
 /* Style for the post item */
-li#post-<%=post._id %> {
+/* li#post-<%=post._id %> {
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #ccc;
     background-color: #f9f9f9;
-}
+} */
 
 /* Style for the delete button */
 a.delete-post-button {
@@ -30,9 +30,9 @@ a.toggle-like-button {
 }
 
 /* Style for the comment form */
-form#post-<%=post._id %>-comments-form {
+/* form#post-<%=post._id %>-comments-form {
     margin-top: 10px;
-}
+} */
 
 input[type="text"] {
     width: 100%;
@@ -50,10 +50,10 @@ input[type="submit"] {
 }
 
 /* Style for the comment list */
-ul#post-comments-<%=post._id %> {
+/* ul#post-comments-<%=post._id %> {
     list-style: none;
     padding: 0;
-}
+} */
 
 /* Style for individual comments */
 .comment {

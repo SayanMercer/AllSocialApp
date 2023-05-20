@@ -4,8 +4,10 @@
   padding: 5px 10px;
   display: flex;
   justify-content: flex-start; }
-  #layout-footer a {
-    color: white;
-    text-decoration: none; }
-  #layout-footer .footer-nav ul {
-    list-style: none; }
+
+#layout-footer a {
+  color: white;
+  text-decoration: none; }
+
+#layout-footer .footer-nav ul {
+  list-style: none; }

@@ -1,0 +1,24 @@
+/* Style for the comment item */
+/* Style for the delete button */
+a.delete-comment-button {
+  color: red;
+  text-decoration: none; }
+
+/* Style for the comment content */
+p {
+  margin-bottom: 5px; }
+
+/* Style for the comment author */
+small {
+  font-size: 12px;
+  color: #888; }
+
+/* Style for the likes */
+a.toggle-like-button {
+  color: #333;
+  text-decoration: none; }
+
+/* Style for the comment list */
+ul.comments-list {
+  list-style: none;
+  padding: 0; }
