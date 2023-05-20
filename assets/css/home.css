@@ -1,15 +1,5 @@
-  #home-container {
-
-  display: flex; 
- padding: 20px 50px;
-  display: flex;
-  width: 80%;
-  margin: 0 auto;
- }
- #feed-posts{
-  flex-grow: 0.8;
-    flex-direction: column;
- }
+/* #home-container {
+  display: flex; }
   #home-container #feed-posts {
     width: 70%;
     padding: 10px; }
@@ -17,118 +7,72 @@
     width: 30%;
     padding: 10px;
     border-left: 1px solid lightgray;
-    height: 100%; }  
+    height: 100%; } */
 
-   
-    #create-post{
-    border: none;
-      border-radius: 5px;
-      padding: 250px;
-      font-size: 16px;
-      line-height: 5.5;
-      width: 300%;
-      height: 100px;
-      resize: none;
-   } 
-        #create-post:focus {
-       outline: none;
-       box-shadow: 0 0 0 2px #0088cc;
-     }
-
-      #add-post-btn {
-        background-color: #0088cc;
+        #home-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-start;
+        }
+    
+        #feed-posts,
+        #user-friends {
+          flex-basis: 45%;
+          margin-right: 20px;
+        }
+    
+        #feed-posts h4,
+        #user-friends h4 {
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+    
+        #create-post-form {
+          margin-bottom: 20px;
+        }
+    
+        .create-post textarea {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          resize: vertical;
+        }
+    
+        #create-post-form #add-post-btn {
+          margin-top: 10px;
+          padding: 10px 20px;
+          background-color: #4aa0bd;
           color: #fff;
           border: none;
-          border-radius: 4px;
-          padding: 5px 24px;
-          font-size: 10px;
-          font-weight: bold;
+          border-radius: 5px;
           cursor: pointer;
-          transition: background-color 0.3s ease-in-out;
-     } 
-  
-     
-  
-     #add-post-btn:hover {
-      background-color: #006699;
-     } 
-        #feed-posts{
-            flex-grow: 0.8;
-            flex-direction: column;
         }
-     
-
-/* 
-            #home-container {
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: space-between;
-            }
-      
-            #feed-posts {
-              width: 60%;
-            }
-      
-            #create-post {
-              margin-bottom: 20px;
-            }
-      
-            #create-post textarea {
-              width: 100%;
-              border: 1px solid #ccc;
-              border-radius: 5px;
-              padding: 10px;
-              font-size: 16px;
-              line-height: 1.5;
-              resize: none;
-            }
-      
-            #create-post input[type="submit"] {
-              background-color: #0088cc;
-              color: #fff;
-              border: none;
-              border-radius: 4px;
-              padding: 12px 24px;
-              font-size: 16px;
-              font-weight: bold;
-              cursor: pointer;
-              transition: background-color 0.3s ease-in-out;
-            }
-      
-            #create-post input[type="submit"]:hover {
-              background-color: #006699;
-            }
-      
-            #posts-list-container {
-              border: 1px solid #ccc;
-              border-radius: 5px;
-              padding: 10px;
-              margin-bottom: 20px;
-            }
-      
-            #posts-list-container ul {
-              list-style: none;
-              margin: 0;
-              padding: 0;
-            }
-      
-            #user-friends {
-              width: 35%;
-            }
-      
-            #user-friends h4 {
-              margin-bottom: 10px;
-            }
-      
-            #user-friends p {
-              margin-bottom: 5px;
-            }
-      
-            #user-friends a {
-              color: #0088cc;
-              text-decoration: none;
-            }
-      
-            #user-friends a:hover {
-              text-decoration: underline;
-            } */
+    
+        #posts-list-container ul {
+          list-style-type: none;
+          padding: 0;
+        }
+    
+        #user-friends p {
+          margin-bottom: 10px;
+        }
+    
+        #user-friends a {
+          color: #4aa0bd;
+          text-decoration: none;
+        }
+    
+        #user-chat-box {
+          position: fixed;
+          bottom: 10px;
+          right: 10px;
+          border: 1px dashed grey;
+          height: 350px;
+          width: 300px;
+          background: white;
+          padding: 5px;
+          box-shadow: 1px 1px 1px 1px lightgrey;
+        }

@@ -1,69 +1,19 @@
- /* body {
+/* body {
   background-color: #4aa0bd; }
 
 .main {
   align-items: center;
   display: flex;
   flex-direction: row;
-  justify-content: center; }  */
+  justify-content: center; } */
 
-
-                /* User Profile Page */
-                .profile {
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  margin: 50px auto;
-                  width: 80%;
-                  max-width: 600px;
-                }
-        
-                .profile img {
-                  border-radius: 50%;
-                  margin-bottom: 20px;
-                }
-        
-                .profile form {
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                }
-        
-                .profile input[type="text"],
-                .profile input[type="email"],
-                .profile input[type="file"] {
-                  margin-bottom: 10px;
-                  padding: 10px;
-                  border: none;
-                  border-radius: 5px;
-                  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-                  width: 100%;
-                  max-width: 400px;
-                }
-        
-                .profile input[type="submit"] {
-                  background-color: #0088cc;
-                  color: white;
-                  border: none;
-                  border-radius: 5px;
-                  padding: 10px 20px;
-                  cursor: pointer;
-                  transition: background-color 0.3s ease;
-                }
-        
-                .profile input[type="submit"]:hover {
-                  background-color: #005580;
-                }
-        
-                /* Media Query for smaller screens */
-                @media screen and (max-width: 480px) {
-                  .profile {
-                    margin: 30px auto;
-                  }
-        
-                  .profile input[type="text"],
-                  .profile input[type="email"],
-                  .profile input[type="file"] {
-                    max-width: 300px;
-                  }
-                }
+    body {
+      background-color: #4aa0bd;
+    }
+  
+    .main {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
